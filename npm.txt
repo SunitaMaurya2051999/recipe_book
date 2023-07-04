@@ -2,4 +2,12 @@ npx create-react-app view --template typescript
 
 npm install --save-dev vite
 npm install --save-dev @vitejs/plugin-react-refresh react-refresh
+npm install react-router-dom
 
+
+
+
+# Backend
+
+npm init -y
+npm install express
