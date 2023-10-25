@@ -4,8 +4,9 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import RecipeCard from './RecipeCard'
+import SpringModal from './elements/Modal'
 const Home = () => {
   return (
     <>
@@ -34,7 +35,8 @@ const Home = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               {/* News */}
             </Typography>
-            <Button color="inherit">Login</Button>
+            {/* <Button color="inherit">Login</Button> */}
+      <SpringModal />
           </Toolbar>
         </AppBar>
       </Box>

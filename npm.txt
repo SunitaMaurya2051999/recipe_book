@@ -4,6 +4,7 @@ npm install --save-dev vite
 npm install --save-dev @vitejs/plugin-react-refresh react-refresh
 npm install react-router-dom
 npm install @mui/material @emotion/react @emotion/styled
+npm install redux react-redux
 
 
 
