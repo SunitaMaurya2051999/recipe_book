@@ -14,9 +14,10 @@ module.exports = (sequelize, DataTypes) => {
   entity.init(
     {
       id: { type: DataTypes.INTEGER, autoIncrement: true, primaryKey: true },
-      firstname: DataTypes.STRING,
-      lastname: DataTypes.STRING,
+      first_name: { type: DataTypes.STRING(255), allowNull: false },
+      last_name: { type: DataTypes.STRING(255), allowNull: false },
       email: { type: DataTypes.STRING(255), allowNull: false },
+      pass_word: { type: DataTypes.STRING(255), allowNull: false },
     },
     {
       sequelize,

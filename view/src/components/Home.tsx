@@ -4,9 +4,8 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-// import Button from "@mui/material/Button";
-import RecipeCard from './RecipeCard'
-import SpringModal from './elements/Modal'
+import RecipeCard from "./RecipeCard";
+import ModalComponent from "./account/Modal";
 const Home = () => {
   return (
     <>
@@ -35,23 +34,21 @@ const Home = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               {/* News */}
             </Typography>
-            {/* <Button color="inherit">Login</Button> */}
-      <SpringModal />
+
+            <ModalComponent />
           </Toolbar>
         </AppBar>
       </Box>
       <div className="home_initial_content">
-      <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className="App-logo" alt="logo" />
       </div>
       <div className="home_center_content">
-      <RecipeCard />
-      <RecipeCard />
-      <RecipeCard />
-      <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
+        <RecipeCard />
       </div>
-      <footer className="home_footer">
-              Sunita
-      </footer>
+      <footer className="home_footer">Sunita</footer>
     </>
   );
 };
