@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export interface LoginState {
+export interface AccountState {
   isAccountModalOpen: boolean
 }
 
-const initialState: LoginState = {
+const initialState: AccountState = {
   isAccountModalOpen: false,
 }
 

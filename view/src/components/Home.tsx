@@ -10,6 +10,7 @@ import Grid from "@mui/material/Grid";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
+  console.log('call-home');
   const navigate = useNavigate();
 
   useEffect(() => {

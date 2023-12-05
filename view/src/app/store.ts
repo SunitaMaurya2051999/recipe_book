@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import accountReducer from '../components/account/store/accountSlice'
+import accountReducer from '../components/account/store/accountSlice';
+import profileReducer from '../components/dashboard/store/profileSlice'
 
 export const store = configureStore({
   reducer: {
     account:accountReducer,
+    profile:profileReducer
   },
 })
 
