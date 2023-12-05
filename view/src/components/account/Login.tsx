@@ -45,8 +45,13 @@ export default function Login() {
     const response = await callApiMethod("/api/user/login-user", loginUser);
     if (response.status === "success" && response.data) {
       dispatch(closeAccountModal());
-      navigate("/dashboard");
+      storeLoginUserDetails(response.data);
     }
+  };
+
+  const storeLoginUserDetails = (data: any) => {
+    localStorage.setItem("login_user_detail", JSON.stringify(data));
+    navigate("/dashboard");
   };
   return (
     <div>

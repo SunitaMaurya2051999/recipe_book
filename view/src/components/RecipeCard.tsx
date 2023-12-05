@@ -5,7 +5,7 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
+// import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton, { IconButtonProps } from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
@@ -30,7 +30,7 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
   }),
 }));
 
-export default function RecipeReviewCard() {
+export default function RecipeReviewCard({data}:any) {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -38,11 +38,11 @@ export default function RecipeReviewCard() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345, marginRight: 5 }}>
+    <Card sx={{ maxWidth: 345, marginRight: 0 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+            {data.user_name.charAt(0).toUpperCase()}
           </Avatar>
         }
         action={
@@ -50,13 +50,13 @@ export default function RecipeReviewCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={data.recipe_name}
+        subheader={data.recipe_date}
       />
       <CardMedia component="img" height="194" image="https://mui.com/static/images/cards/paella.jpg" alt="Paella dish" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.
+         {data.recipe_description}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -70,7 +70,7 @@ export default function RecipeReviewCard() {
           <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+      {/* <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10 minutes.</Typography>
@@ -86,7 +86,7 @@ export default function RecipeReviewCard() {
           </Typography>
           <Typography>Set aside off of the heat to let rest for 10 minutes, and then serve.</Typography>
         </CardContent>
-      </Collapse>
+      </Collapse> */}
     </Card>
   );
 }

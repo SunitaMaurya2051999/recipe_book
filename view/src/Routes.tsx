@@ -5,7 +5,7 @@ import UserDashBoard from './components/dashboard/UserDashBoard';
 const App = () => {
   return (
     <Routes>
-      <Route path="/"  element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/dashboard"  element={<UserDashBoard />} />
     </Routes>
   );
