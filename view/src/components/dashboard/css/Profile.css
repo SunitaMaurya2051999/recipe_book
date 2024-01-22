@@ -1,0 +1,9 @@
+.edit_profile {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.edit_profile:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}

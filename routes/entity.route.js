@@ -8,4 +8,6 @@ module.exports = (app) => {
     app.post("/api/user/login-user", EntityController.loginUser);
     
     app.post("/api/user/user-details",EntityController.getUserDetails)
+
+    app.post("/api/user/update-login-user-details",EntityController.updateLoginUserDetails)
 }
